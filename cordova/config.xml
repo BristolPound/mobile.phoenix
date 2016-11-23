@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.bristolpound.mobile.phoenix" version="0.0.1">
+  <name>Bristol Pound</name>
+  <description>
+    Bristol Pound test app.
+  </description>
+  <author email="martin.rueegg@bristolpound.org" href="https://bristolpound.org">
+    Martin Rüegg
+  </author>
+</widget>

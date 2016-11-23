@@ -1,0 +1,6 @@
+{
+  "main": "src/org/bristolpound/mobile/phoenix/main.js",
+  "dependencies": {
+    "tabris": "^1.10.0"
+  }
+}
