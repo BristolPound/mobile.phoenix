@@ -1,6 +1,6 @@
 {
   "name": "org.bristolpound.mobile.phoenix",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bristol Pound test app.",
   "main": "src/org/bristolpound/mobile/phoenix/main.js",
   "homepage": "Http://bristolpound.org",
