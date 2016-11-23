@@ -2,15 +2,65 @@
 <widget id="org.bristolpound.mobile.phoenix" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>
     Bristol Pound
-  </name>
+    </name>
     <description>
     Bristol Pound test app.
-  </description>
+    </description>
     <author email="martin.rueegg@bristolpound.org" href="https://bristolpound.org">
     Martin Rüegg
-  </author>
+    </author>
     <plugin name="cordova-plugin-x-toast" spec="~2.5.2" />
     <plugin name="cordova-plugin-network-information" spec="~1.3.0" />
     <plugin name="phonegap-nfc" spec="~0.6.6" />
     <plugin name="io.litehelpers.cordova.sqlite" spec="https://github.com/litehelpers/Cordova-sqlite-storage" />
+    <platform name="ios">
+        <!-- iOS 8.0+ -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-60x60@3x.png"   width="180" height="180" />
+        <!-- iOS 7.0+ -->
+        <!-- iPhone / iPod Touch  -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-60x60@1x.png"   width="60"  height="60" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-60x60@2x.png"   width="120" height="120" />
+        <!-- iPad -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-76x76@1x.png"   width="76"  height="76" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-76x76@2x.png"   width="152" height="152" />
+        <!-- iOS 6.1 -->
+        <!-- Spotlight Icon -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-40x40@1x.png"   width="40"  height="40" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-40x40@2x.png"   width="80"  height="80" />
+        <!-- iPhone / iPod Touch -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-57x57@1x.png"   width="57"  height="57" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-57x57@2x.png"   width="114" height="114" />
+        <!-- iPad -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-72x72@1x.png"   width="72"  height="72" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-72x72@2x.png"   width="144" height="144" />
+        <!-- iPhone Spotlight and Settings Icon -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-29x29@1x.png"   width="29"  height="29" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-App-29x29@2x.png"   width="58"  height="58" />
+        <!-- iPad Spotlight and Settings Icon -->
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-Small-50x50@1x.png" width="50"  height="50" />
+        <icon src="res/icons/ios/AppIcon.appiconset/Icon-Small-50x50@2x.png" width="100" height="100" />
+    </platform>
+
+    <platform name="android">
+        <icon src="res/icons/android/mipmap-ldpi/ic_launcher.png"           density="ldpi" />
+        <icon src="res/icons/android/mipmap-mdpi/ic_launcher.png"           density="mdpi" />
+        <icon src="res/icons/android/mipmap-hdpi/ic_launcher.png"           density="hdpi" />
+        <icon src="res/icons/android/mipmap-xhdpi/ic_launcher.png"          density="xhdpi" />
+        <icon src="res/icons/android/mipmap-xxhdpi/ic_launcher.png"         density="xxhdpi" />
+        <icon src="res/icons/android/mipmap-xxxhdpi/ic_launcher.png"        density="xxxhdpi" />
+
+        <icon src="res/screen/android/splash-land-ldpi.320x200.png"         density="land-ldpi" />
+        <icon src="res/screen/android/splash-land-mdpi.480x320.png"         density="land-mdpi" />
+        <icon src="res/screen/android/splash-land-hdpi.800x480.png"         density="land-hdpi" />
+        <icon src="res/screen/android/splash-land-xhdpi.1280x720.png"       density="land-xhdpi" />
+        <icon src="res/screen/android/splash-land-xxhdpi.1600x960.png"      density="land-xxhdpi" />
+        <icon src="res/screen/android/splash-land-xxxhdpi.1920x1280.png"    density="land-xxxhdpi" />
+
+        <icon src="res/screen/android/splash-port-ldpi.200x320.png"         density="port-ldpi" />
+        <icon src="res/screen/android/splash-port-mdpi.320x480.blue.png"    density="port-mdpi" />
+        <icon src="res/screen/android/splash-port-hdpi.480x800.png"         density="port-hdpi" />
+        <icon src="res/screen/android/splash-port-xhdpi.720x1280.png"       density="port-xhdpi" />
+        <icon src="res/screen/android/splash-port-xxhdpi.960x1600.png"      density="port-xxhdpi" />
+        <icon src="res/screen/android/splash-port-xxxhdpi.1280x1920.png"    density="port-xxxhdpi" />
+    </platform>
 </widget>
