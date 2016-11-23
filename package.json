@@ -1,5 +1,17 @@
 {
+  "name": "org.bristolpound.mobile.phoenix",
+  "version": "0.0.2",
+  "description": "Bristol Pound test app.",
   "main": "src/org/bristolpound/mobile/phoenix/main.js",
+  "homepage": "Http://bristolpound.org",
+  "license" : "GPL-3.0+",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/BristolPound/mobile.phoenix.git"
+  },
+  "scripts": {
+    "start": "http-server -c-1 -d false"
+  },
   "dependencies": {
     "tabris": "^1.10.0"
   }

@@ -1,10 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.bristolpound.mobile.phoenix" version="0.0.1">
-  <name>Bristol Pound</name>
-  <description>
+<widget id="org.bristolpound.mobile.phoenix" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>
+    Bristol Pound
+  </name>
+    <description>
     Bristol Pound test app.
   </description>
-  <author email="martin.rueegg@bristolpound.org" href="https://bristolpound.org">
+    <author email="martin.rueegg@bristolpound.org" href="https://bristolpound.org">
     Martin Rüegg
   </author>
+    <plugin name="cordova-plugin-x-toast" spec="~2.5.2" />
+    <plugin name="cordova-plugin-network-information" spec="~1.3.0" />
+    <plugin name="phonegap-nfc" spec="~0.6.6" />
+    <plugin name="io.litehelpers.cordova.sqlite" spec="https://github.com/litehelpers/Cordova-sqlite-storage" />
 </widget>
