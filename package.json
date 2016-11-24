@@ -14,5 +14,6 @@
   },
   "dependencies": {
     "tabris": "^1.10.0"
+    ,"com.peerio.cordova.plugin.sqlcipher": "^1.2.2"
   }
 }
