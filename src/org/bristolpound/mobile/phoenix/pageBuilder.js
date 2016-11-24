@@ -1,3 +1,5 @@
+console.log("pageBuilder.js");
+
 /**
  * http://usejsdoc.org/
  */

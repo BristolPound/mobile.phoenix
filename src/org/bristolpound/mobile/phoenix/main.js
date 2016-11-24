@@ -1,4 +1,4 @@
-
+console.log("main.js");
 
 //var books = require("./books.json");
 
@@ -12,7 +12,6 @@ new tabris.Drawer().append(new tabris.PageSelector());
 	// }).on("select", function() {
 	  // createSettingsPage().open();
 	// });
-
 
 
 
