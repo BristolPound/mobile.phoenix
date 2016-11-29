@@ -30,11 +30,12 @@ if (!TopPage)
 		    var titleTextView = new tabris.TextView({
 		      layoutData: {left: 64, right: PAGE_MARGIN, top: PAGE_MARGIN},
 		      markupEnabled: true,
-		      textColor: "#4a4a4a"
+		      textColor: "#F28F30s"
 		    }).appendTo(cell);
 		    var descTextView = new tabris.TextView({
 		      layoutData: {left: 64, right: PAGE_MARGIN, top: [titleTextView, 4]},
-		      textColor: "#7b7b7b"
+		      background: '#158ACB',
+		      textColor: "#204497"
 		    }).appendTo(cell);
 		    cell.on("change:item", function(widget, entry) {
 		      //imageView.set("image", entry.image);
@@ -44,7 +45,7 @@ if (!TopPage)
 		  }
 	}).on("select", function(target, value) {
 	  //createBookPage(value).open();
-		//alert(value);
+		alert(value);
 	});
 
 	var TopPage = new tabris.Page({
@@ -54,7 +55,7 @@ if (!TopPage)
 
 	var trayShade = new tabris.Composite({
 	  layoutData: {left: 0, right: 0, top: 0, bottom: 0},
-	  background: 'black',
+	  background: '#204497',
 	  opacity: 0
 	}).appendTo(TopPage);
 
@@ -64,7 +65,7 @@ if (!TopPage)
 
 	var strap = new tabris.Composite({
 	  layoutData: {left: '40%', right: '40%', top: 0, height: 65},
-	  background: '#259b24'
+	  background: '#F28F30'
 	}).appendTo(tray);
 
 	var strapIcon = new tabris.TextView({

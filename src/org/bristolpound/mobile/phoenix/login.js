@@ -16,6 +16,7 @@ var page = new pageBuilder.topPageBuilder
 	,"Login to your Bristol Pound account"
 	,function(parent)
 	{
+		createTextView("version 0.0.3.dev6")
 		input = new tabris.TextInput({
 		    text: "your message",
 		    layoutData: {left: 10, top: 10, right: 10}
@@ -25,7 +26,8 @@ var page = new pageBuilder.topPageBuilder
 		    layoutData: {left: 10, top: [40, 10], right: 10},
 		    text: "Show short center"
 		  }).appendTo(parent).on("select", function() {
-			  onDeviceReady();
+			  window.plugins.pinDialog.prompt("hello", onDeviceReady, "title", ["OK","Cancel"]);
+			 
 		  });
 
 	}
@@ -58,66 +60,44 @@ function onDeviceReady()
 	}
 	);
 	
-console.log("NFC addNdefListener ...");
-nfc.addNdefListener(function(nfcEvent)
-{
-	console.log("NFC Ndef event!");
-	console.log(JSON.stringify(nfcEvent));
-	//window.plugins.toast.showShortTop(nfcEvent.type);
-	//createTextView(type);
-},
-function ()
-{
-	console.log("NFC is listening");
-	window.plugins.toast.showShortTop("listening");
-},
-function ()
-{
-	console.log("NFC registration failed");
-	window.plugins.toast.showShortTop("registration failed");
-}
-);
-
-console.log("NFC addTagDiscoveredListener ...");
-nfc.addTagDiscoveredListener(function(nfcEvent)
-{
-	console.log("NFC Tag discovered!");
-	console.log(JSON.stringify(nfcEvent));
-	//window.plugins.toast.showShortTop(nfcEvent.type);
-	//createTextView(nfcEvent.type);
-},
-function ()
-{
-	console.log("NFC is listening");
-	window.plugins.toast.showShortTop("listening");
-},
-function ()
-{
-	console.log("NFC registration failed");
-	window.plugins.toast.showShortTop("registration failed");
-}
-);
-
-
-console.log("NFC addNdefFormatableListener ...");
-nfc.addNdefFormatableListener(function(nfcEvent)
-{
-	console.log("NFC addNdefFormatableListener discovered!");
-	console.log(JSON.stringify(nfcEvent));
-	//window.plugins.toast.showShortTop(nfcEvent.type);
-	//createTextView(nfcEvent.type);
-},
-function ()
-{
-	console.log("NFC is listening");
-	window.plugins.toast.showShortTop("listening");
-},
-function ()
-{
-	console.log("NFC registration failed");
-	window.plugins.toast.showShortTop("registration failed");
-}
-);
+	
+	var listeners = [
+		'TagDiscovered',
+		'MimeType',
+		'Ndef',
+		'MifareUltralight',
+		'MifareClassic',
+		'NdefFormatable'
+		];
+	
+	for(listener of listeners)
+	{
+		for(api of ['', '2'])
+		{
+			var f = 'add'+listener+'Listener'+api;
+			
+			console.log("NFC "+listener+api+" ...");
+			nfc[f](function(nfcEvent)
+			{
+				console.log("NFC "+listener+api+" event!");
+				console.log(JSON.stringify(nfcEvent));
+				//window.plugins.toast.showShortTop(nfcEvent.type);
+				//createTextView(type);
+			},
+			function ()
+			{
+				console.log("NFC add"+listener+"Listener"+api+" is listening");
+				window.plugins.toast.showShortTop("listening");
+			},
+			function ()
+			{
+				console.log("NFC "+listener+api+" registration failed");
+				window.plugins.toast.showShortTop("registration failed");
+			}
+			);
+		}
+	}
+	
 
 /*
  

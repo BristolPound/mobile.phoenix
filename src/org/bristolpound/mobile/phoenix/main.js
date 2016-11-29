@@ -30,6 +30,13 @@ var pageLogin = require("./login");
 
 window.plugins.toast.showShortTop("post Login");
 
+var pageDirectory = require("./Directory");
+
+
+cordova.getAppVersion.getVersionNumber(function (version) {
+	window.plugins.toast.showShortBottom(version);
+});
+
 pageBuilder.topPage.open();
 
 
