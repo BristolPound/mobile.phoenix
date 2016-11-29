@@ -16,7 +16,8 @@ var page = new pageBuilder.topPageBuilder
 	,"Login to your Bristol Pound account"
 	,function(parent)
 	{
-		createTextView("version 0.0.3.dev6")
+		createTextView("version 0.0.3.dev7");
+		
 		input = new tabris.TextInput({
 		    text: "your message",
 		    layoutData: {left: 10, top: 10, right: 10}
